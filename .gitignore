@@ -43,6 +43,9 @@ output/
 !docs/*.md
 !examples/*.md
 !templates/*.md
+!CONTRIBUTING.md
+!.github/**/*.md
+!.github/**/*.yml
 
 # OS
 .DS_Store
