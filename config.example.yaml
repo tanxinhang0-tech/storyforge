@@ -1,0 +1,65 @@
+# StoryForge 配置文件示例
+# 复制此文件为 config.yaml 并填入你的配置
+
+# AI模型配置
+model:
+  # 支持的provider: openai / zhipu / mimo / deepseek
+  provider: "openai"
+  
+  # API密钥
+  api_key: "your-api-key-here"
+  
+  # API地址（根据provider自动设置，或手动指定）
+  base_url: "https://api.openai.com/v1"
+  
+  # 模型名称
+  # OpenAI: gpt-3.5-turbo, gpt-4
+  # 智谱: glm-4.5-air, glm-4.7
+  # MiMo: mimo-v2.5
+  # DeepSeek: deepseek-chat
+  model_name: "gpt-3.5-turbo"
+
+# 生成参数配置
+generation:
+  # 最大token数
+  max_tokens: 2000
+  
+  # 创造性 (0.0-1.0，越高越有创意)
+  temperature: 0.8
+  
+  # 语言: zh(中文) / en(英文)
+  language: "zh"
+  
+  # 脚本类型: comic(漫画) / drama(短剧)
+  default_type: "comic"
+
+# 输出配置
+output:
+  # 输出格式: markdown / json / pdf
+  format: "markdown"
+  
+  # 输出目录
+  save_path: "./output"
+  
+  # 文件名格式
+  filename_pattern: "{theme}_{type}_{date}"
+
+# 提示词配置
+prompts:
+  # 提示词目录
+  directory: "./prompts"
+  
+  # 默认提示词
+  default_comic: "comic_basic.yaml"
+  default_drama: "drama_basic.yaml"
+
+# 模板配置
+templates:
+  # 模板目录
+  directory: "./templates"
+  
+  # 内置模板列表
+  builtin:
+    - "school_life"
+    - "urban_romance"
+    - "fantasy_adventure"
